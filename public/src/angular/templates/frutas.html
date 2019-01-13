@@ -1,0 +1,11 @@
+<div>
+   Search: <input ng-model="$ctrl.busqueda" />
+</div>
+
+<ul>
+  <li ng-repeat="fruta in $ctrl.frutas | filter: $ctrl.busqueda | orderBy: $ctrl.orderBy">
+    <h3>{{fruta.id}}</h3>
+    <h1>{{fruta.nombre}}</h1>
+    <h5>{{fruta.colorHEX}}</h5>
+  </li>
+</ul>
