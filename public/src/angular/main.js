@@ -1,4 +1,4 @@
-const config = function ($routeProvider) {
+const config = function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/parrafos', {
       template: '<parrafos></parrafos>'
@@ -6,15 +6,22 @@ const config = function ($routeProvider) {
     .when('/frutas', {
       template: '<frutas></frutas>'
     })
+    .when('/frutas/:frutaID', {
+      template: '<frutas-detalles></frutas-detalles>'
+    })
     //otherwise('/phones');
+
+  $locationProvider.html5Mode(true);
+  //$locationProvider.hashPrefix('!');
 }
 
 angular.module('appAngular', [
   'ngRoute',
-  'parrafos',
-
+  'parrafosModule',
+  'frutas',
+  'frutasDetalles',
 ])
-.config(['$routeProvider', config])
+.config(['$routeProvider', '$locationProvider', config])
 .controller('appController',  ($scope, $http) => {
 
   $scope.texto = 'Soy un texto muy chulo';

@@ -2,24 +2,28 @@
   {
     "id": 1,
     "nombre": "naranja",
-    "colorHEX": "#c2940e"
+    "colorHEX": "#c2940e",
+    "stock" : 0
   },
 
   {
     "id": 2,
     "nombre": "manzana",
-    "colorHEX": "#18c20e"
+    "colorHEX": "#18c20e",
+    "stock" : 6
   },
 
   {
     "id": 3,
     "nombre": "limón",
-    "colorHEX": "#fff131"
+    "colorHEX": "#fff131",
+    "stock" : 89
   },
 
   {
     "id": 4,
     "nombre": "cereza",
-    "colorHEX": "#ff3131" 
+    "colorHEX": "#ff3131" ,
+    "stock" : 0
   }
 ]

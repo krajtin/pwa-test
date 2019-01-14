@@ -1,13 +1,27 @@
 <html>
 <head>
+  <!-- Es necesario para el routing  desde el contexto
+  Si es desde otro contexto   <base href="/subapp/" />
+  https://code.angularjs.org/1.7.5/docs/error/$location/nobase
+  -->
+  <base href="/" />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
   <script src="src/angular/angular.route.js"></script>
+  <!-- Local-Zone  https://github.com/angular/angular.js/tree/master/src/ngLocale -->
+  <script src="src/angular/angular-locale_es-es.js"></script>
+  <!-- /Local-Zone -->
   <script type="text/javascript" src="src/angular/main.js"></script>
   <script type="text/javascript" src="src/angular/components/parrafos.js"></script>
   <script type="text/javascript" src="src/angular/components/frutas.js"></script>
+  <script type="text/javascript" src="src/angular/components/frutasDetalles.js"></script>
+
+
+
 
 </head>
 <body>
@@ -22,10 +36,11 @@
         </li>
       </ul>
 
-      <!--<parrafos></parrafos>
-      <frutas></frutas>-->
+      <!-- ng-view  Permite crear el routing de AngularJS-->
       <div ng-view></div>
-
+      <!-- Para acceder al routing se crean href sin el caracter '/' -->
+      <a href="parrafos">Ver PARRAFOS routing</a>
+      <a href="frutas">Ver FRUTAS routing</a>
     </div>
   </main>
 
