@@ -1,0 +1,34 @@
+<div class="registro">
+  <form name="registro" ng-submit="$ctrl.annadir()">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" name="nombre" ng-model="lenguaje.nombre" placeholder="Nombre" required/>
+      <span class="message-flash" ng-show="registro.nombre.$dirty && registro.nombre.$error.required">Nombre es requerido</span>
+    </div>
+    <div class="form-group">
+      <label>Año creación</label>
+      <select class="" name="anno" ng-model="lenguaje.anno" ng-options="prop for prop in ['Mayor a 1980', 'Mayor a 2000', 'Mayor a 1990'] | orderBy: '-'" required>
+        <option value="">-- Selecciona el año --</option>
+      </select>
+      <span class="message-flash" ng-show="registro.anno.$dirty && registro.anno.$error.required">Año es requerido</span>
+    </div>
+    <div class="form-group">
+      <label>Tipo de lenguaje</label>
+      <label>
+        Font-end
+        <input type="radio" name="tipo" ng-model="tipo" checked/>
+      </label>
+      <label>
+        Back-end
+        <input type="radio" name="tipo" ng-model="tipo" />
+      </label>
+      <span class="message-flash"></span>
+    </div>
+    <button type="submit" ng-disabled="registro.$invalid || $ctrl.haPulsado">Enviar</button>
+
+  </form>
+</div>
+
+<div id="listado">
+{{$ctrl.lenguajes}}
+</div>

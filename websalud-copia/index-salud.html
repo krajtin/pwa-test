@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>University</title>
+    <link rel="stylesheet" href="styles.salud.css">
+</head>
+<body>
+    <!-- Header -->
+   <header>
+     <nav>
+        <div class="cont-icon">
+            <a href="#">
+            <img width="180" src="https://healthcare.utah.edu/rebrand/img/logos/uhealth-logo.svg" alt="">
+            </a>
+            
+        </div>
+        <div onClick="abrir();" id="menu-icon">
+                X
+            </div>
+        <div class="cont-menu">
+            <div id="menu" class="menu">
+                <a href="">FIND A DOCTOR</a>    
+                <a href="">SERVICES</a>
+                <a href="">LOCATIONS</a>
+                <a href="">FOR PATIENTS & VISITORS</a>
+                <a href="">MYCHART</a>
+            </div>
+           
+            
+        </div>
+     </nav> 
+   </header> 
+   <!--/ Header -->
+   <main>
+       <div class="categorias">
+           <div class="contenido">
+               Find a Doctor
+           </div>
+           <div class="contenido">
+                Find a Location
+            </div>
+            <div class="contenido">
+                Out Services
+            </div>
+            <div class="contenido">
+                My Health Records
+            </div>
+       </div>
+       <section id="section1">
+           <div class="container">
+               <div id="info">
+                   <div id="historia">
+                       <h3>MY CHART</h3>
+                       <p>MyChart is a secure, online health management tool that connects University of Utah Health Patients to portions of their personal medical record and University Health Plan members to their insurance information. </p>
+                   </div>
+                   <form>
+                        <input type="text" placeholder="Nombre"/>
+                        <input type="text" placeholder="Password"/>
+                    </form>
+               </div>
+               
+           </div>
+       </section>
+   </main>
+   <script>
+       function abrir() {
+            document.getElementById("menu").classList.add("open");
+       }
+   </script>
+</body>
+</html>

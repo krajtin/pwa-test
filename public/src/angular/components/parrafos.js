@@ -1,10 +1,9 @@
-angular.module('parrafosModule', []);
+var parrafosModule = angular.module('parrafosModule', []);
 
-angular
-  .module('parrafosModule')
-  .component('parrafos', {
+parrafosModule.component('parrafos', {
     // Para crear la ruta de templateUrl es necesario fijarse la ruta fisica del index.html
     templateUrl: 'src/angular/templates/parrafos.html',
+    controllerAs: 'vm',
     controller: function () {
       this.usuario = 'Daniel';
     }

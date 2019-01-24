@@ -1,0 +1,30 @@
+<select  ng-model="desplegable1" ng-options="label.nombre group by label.estacion for label in fr.frutas">
+  <option value="">-- Seleccione --</option>
+</select>
+
+<!-- Pone en disabled las frutas cuyo stock es 0. Usamos ! porque 0 en programacion es false y queremos deshabilitar las que no tienen stock-->
+<select  ng-model="desplegable2" ng-options="label.nombre disable when !label.stock for label in fr.frutas | orderBy:'-stock'">
+  <option value="">-- Seleccione --</option>
+</select>
+
+<select  ng-model="desplegable3" ng-options="select as label.nombre for label in fr.frutas | orderBy:'-stock'">
+  <option value="">-- Seleccione --</option>
+</select>
+<form name="formFrutas" ng-submit="fr.borrar()">
+  <table>
+    <thead>
+      <tr>
+        <th class="clicked" ng-click="fr.orden = fr.setOrdenar(key)" ng-repeat="(key, value) in fr.frutas[0]" >{{key | uppercase}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="fruta in fr.frutas | orderBy: fr.orden.valor:fr.orden.reverse track by $index">
+        <td ng-repeat="(key, value) in fruta">{{value}}</td>
+        <td><input type="checkbox" name="checkItem" ng-model="toDelete[fruta.id]" /></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="submit" ng-disabled="fr.checkeados()">Borrar seleccionados</button>
+  <button type="button" ng-click="fr.deshCambios()">Deshacer cambios</button>
+
+</form>
