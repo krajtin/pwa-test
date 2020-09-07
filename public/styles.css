@@ -1,0 +1,56 @@
+.toggle label{
+  display: block;
+
+}
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle input[type="checkbox"]:checked + .round::before{
+  transform: translateX(16px);
+  transition: transform .8s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+.toggle input[type="checkbox"]:checked + .round{
+  background-color: #71b7ff;
+}
+
+.toggle .round {
+  display: inline-block;
+  background-color: #ccc;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  border-radius: 10px;
+}
+.toggle .round::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 2;
+  transition: transform .8s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+.btn-disponible {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  /* -webkit-user-select: none; */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* user-select: none; */
+  background-color: #5a9791;
+  border: 1px solid #3e6c67;
+  padding: .375rem .75rem;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  border-radius: .25rem;
+}
+.input-invalido {
+  border: 2px solid #ff0000;
+}

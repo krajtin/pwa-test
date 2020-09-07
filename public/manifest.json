@@ -1,0 +1,57 @@
+{
+    "name": "GamePaths",
+    "short_name": "GamePaths",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "recursos/icons/gamepaths-72x72.png",
+        "type": "image/png",
+        "sizes": "72x72",
+        "purpose": "maskable"
+      },
+      {
+        "src": "recursos/icons/gamepaths-72x72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "recursos/icons/gamepaths-96x96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "recursos/icons/gamepaths-128x128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "recursos/icons/gamepaths-144x144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "recursos/icons/gamepaths-152x152.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      },
+      {
+        "src": "recursos/icons/gamepaths-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "recursos/icons/gamepaths-384x384.png",
+        "type": "image/png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "recursos/icons/gamepaths-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
